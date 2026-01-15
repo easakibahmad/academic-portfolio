@@ -28,7 +28,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-white to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900"
+      className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-white to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -36,9 +36,9 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
             Get In Touch
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto"></div>
@@ -54,19 +54,19 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="grid md:grid-cols-3 gap-6 mb-12"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12"
           >
             {contactInfo.map((info, index) => {
               const Icon = info.icon;
               const cardContent = (
                 <>
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Icon className="w-8 h-8 text-white" />
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+                    <Icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
+                  <h3 className="text-base md:text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
                     {info.label}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400">
+                  <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 break-words">
                     {info.value}
                   </p>
                 </>
@@ -76,7 +76,7 @@ const Contact = () => {
                 <motion.a
                   key={index}
                   href={info.href}
-                  className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg text-center hover:shadow-2xl transition-all block"
+                  className="bg-white dark:bg-gray-800 rounded-2xl p-4 md:p-6 shadow-lg text-center hover:shadow-2xl transition-all block"
                   whileHover={{ y: -5, scale: 1.02 }}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -88,7 +88,7 @@ const Contact = () => {
               ) : (
                 <motion.div
                   key={index}
-                  className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg text-center hover:shadow-2xl transition-all"
+                  className="bg-white dark:bg-gray-800 rounded-2xl p-4 md:p-6 shadow-lg text-center hover:shadow-2xl transition-all"
                   whileHover={{ y: -5, scale: 1.02 }}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -106,12 +106,12 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg"
+            className="bg-white dark:bg-gray-800 rounded-2xl p-6 md:p-8 shadow-lg"
           >
-            <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-6 text-center">
+            <h3 className="text-xl md:text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4 md:mb-6 text-center">
               Send a Message
             </h3>
-            <form className="space-y-6">
+            <form className="space-y-4 md:space-y-6">
               <div>
                 <label
                   htmlFor="name"

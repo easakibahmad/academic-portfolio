@@ -28,7 +28,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900"
+      className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -36,9 +36,9 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
             About Me
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto"></div>
@@ -49,18 +49,18 @@ const About = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-8 lg:gap-12"
+          className="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12"
         >
-          <motion.div variants={itemVariants} className="space-y-6">
-            <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
-                <User className="w-6 h-6 text-white" />
+          <motion.div variants={itemVariants} className="space-y-4 md:space-y-6">
+            <div className="flex items-start space-x-3 md:space-x-4">
+              <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
+                <User className="w-5 h-5 md:w-6 md:h-6 text-white" />
               </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">
+              <div className="flex-1 min-w-0">
+                <h3 className="text-lg md:text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">
                   Who I Am
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed">
                   I am Mst. Fariha Akter Sathi, a dedicated student at the
                   University of Dhaka. I have completed my graduation and am
                   currently awaiting my final results. My academic journey has
@@ -70,15 +70,15 @@ const About = () => {
               </div>
             </div>
 
-            <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
-                <Target className="w-6 h-6 text-white" />
+            <div className="flex items-start space-x-3 md:space-x-4">
+              <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
+                <Target className="w-5 h-5 md:w-6 md:h-6 text-white" />
               </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">
+              <div className="flex-1 min-w-0">
+                <h3 className="text-lg md:text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">
                   My Goals
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed">
                   As an aspirant for higher studies, I am committed to pursuing
                   advanced education and research opportunities. I aim to
                   contribute meaningfully to my field of study and make a
@@ -89,40 +89,40 @@ const About = () => {
           </motion.div>
 
           <motion.div variants={itemVariants} className="space-y-6">
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-200">
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-6 md:p-8 shadow-lg">
+              <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-gray-800 dark:text-gray-200">
                 Key Highlights
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 <div className="flex items-center space-x-3">
-                  <GraduationCap className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-                  <div>
-                    <p className="font-semibold text-gray-800 dark:text-gray-200">
+                  <GraduationCap className="w-5 h-5 md:w-6 md:h-6 text-purple-600 dark:text-purple-400 flex-shrink-0" />
+                  <div className="min-w-0">
+                    <p className="font-semibold text-sm md:text-base text-gray-800 dark:text-gray-200">
                       University of Dhaka
                     </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400">
                       Graduation Completed
                     </p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Award className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-                  <div>
-                    <p className="font-semibold text-gray-800 dark:text-gray-200">
+                  <Award className="w-5 h-5 md:w-6 md:h-6 text-purple-600 dark:text-purple-400 flex-shrink-0" />
+                  <div className="min-w-0">
+                    <p className="font-semibold text-sm md:text-base text-gray-800 dark:text-gray-200">
                       3rd Year CGPA: 3.65
                     </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400">
                       Excellent Academic Performance
                     </p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Target className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-                  <div>
-                    <p className="font-semibold text-gray-800 dark:text-gray-200">
+                  <Target className="w-5 h-5 md:w-6 md:h-6 text-purple-600 dark:text-purple-400 flex-shrink-0" />
+                  <div className="min-w-0">
+                    <p className="font-semibold text-sm md:text-base text-gray-800 dark:text-gray-200">
                       Higher Studies Aspirant
                     </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400">
                       Pursuing Advanced Education
                     </p>
                   </div>
